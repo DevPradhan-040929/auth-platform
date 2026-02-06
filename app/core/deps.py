@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from app.database import get_db
 from app.models.user import User
 from app.core.config import settings
+from app.models.token_blacklist import TokenBlacklist
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/users/login")
 
@@ -30,6 +31,10 @@ def get_current_user(
         raise credentials_exception
 
     user = db.query(User).filter(User.id == int(user_id)).first()
+     # check blacklist
+    blacklisted = db.query(TokenBlacklist).filter(TokenBlacklist.token == token).first()
+    if blacklisted:
+       raise HTTPException(status_code=401, detail="Token expired. Login again")
 
     if user is None:
         raise credentials_exception

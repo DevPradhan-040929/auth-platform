@@ -1,9 +1,9 @@
 from pydantic import BaseModel, EmailStr
-
+from typing import Optional
 class UserCreate(BaseModel):
     email: EmailStr
     password: str
-    role: str = "user"
+    role: Optional[str] = "user"
 class UserOut(BaseModel):
     id: int
     email: EmailStr
@@ -20,4 +20,5 @@ class UserLogin(BaseModel):
 
 class Token(BaseModel):
     access_token: str
+    refresh_token: str
     token_type: str = "bearer"

@@ -1,0 +1,12 @@
+2026-02-07 00:07:17,183 - INFO - User logged in: user4@example.com
+2026-02-07 00:07:17,183 - ERROR - Failed login attempt
+2026-02-07 00:07:43,889 - INFO - User logged in: user4@example.com
+2026-02-07 00:07:43,889 - ERROR - Failed login attempt
+2026-02-07 00:14:03,990 - INFO - User logged in: user4@example.com
+2026-02-07 00:14:03,994 - ERROR - Failed login attempt
+2026-02-07 00:15:11,850 - INFO - User logged in: user4@example.com
+2026-02-07 00:15:11,850 - ERROR - Failed login attempt
+2026-02-07 00:16:44,491 - INFO - User logged in: user5@example.com
+2026-02-07 00:16:44,491 - ERROR - Failed login attempt
+2026-02-07 00:17:10,935 - INFO - User logged in: user5@example.com
+2026-02-07 00:17:10,935 - ERROR - Failed login attempt
